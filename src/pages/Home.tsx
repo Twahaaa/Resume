@@ -23,12 +23,12 @@ const Home = () => {
 
           <div className="flex gap-4 fade-in-up delay-600">
             <Link to="/resume">
-              <Button variant="secondary" className="text-sm px-6 py-2 hover-lift bg-primary hover:bg-accent ">
+              <Button variant="secondary" className="text-sm px-6 py-2 hover-lift bg-minty hover:bg-minty/80 text-foreground font-semibold">
                 View Resume
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="secondary" className="text-sm px-6 py-2 hover-lift bg-primary hover:bg-accent">
+              <Button variant="secondary" className="text-sm px-6 py-2 hover-lift bg-toffee hover:bg-toffee/80 text-foreground font-semibold">
                 Get in Touch
               </Button>
             </Link>
