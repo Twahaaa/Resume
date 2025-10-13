@@ -37,7 +37,7 @@ const Contact = () => {
       <div className="container mx-auto max-w-4xl">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 fade-in-up">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Let's Connect</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 mt-5">Let's Connect</h1>
           <p className="text-lg sm:text-xl text-muted-foreground px-4">
             Feel free to reach out to me through any of the following channels
           </p>

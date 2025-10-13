@@ -55,8 +55,8 @@ const BioData = () => {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 fade-in-up">
           <div className="inline-block mb-4 sm:mb-6">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-minty to-mochi p-1 hover:scale-110 transition-transform duration-300 shadow-xl">
-              <div className="w-full h-full rounded-3xl overflow-hidden bg-white">
+            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-gradient-to-br from-minty to-mochi p-1 hover:scale-110 transition-transform duration-300 shadow-xl">
+              <div className="w-full h-full rounded-lg overflow-hidden bg-white mt-8">
                 <img 
                   src="/WhatsApp Image 2025-10-14 at 12.42.56 AM.jpeg" 
                   alt="Aboobakkar Twaha"

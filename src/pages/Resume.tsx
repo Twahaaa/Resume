@@ -125,7 +125,7 @@ const Resume = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h1 className="text-5xl font-bold mb-4">Resume</h1>
+          <h1 className="text-5xl font-bold mb-4 mt-5">Resume</h1>
           <p className="text-xl text-muted-foreground mb-6">
             A comprehensive overview of my professional journey
           </p>
