@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Pastel Color Palette - All HSL */
+    --nougat: 31 30% 71%;
+    --meringue: 32 41% 86%;
+    --mochi: 14 65% 82%;
+    --flan: 36 89% 90%;
+    --minty: 159 31% 80%;
+    --toffee: 38 98% 84%;
+
+    /* Semantic tokens */
+    /* --background: 50 45% 87%; 
+    --foreground: 32 28% 23%;  */
+    --background: 36 50% 91%; /* #F5EEDF - light cream beige */
+    --foreground: 25 25% 30%; /* #4E4036 - slightly darker brown-gray */
+
+    --card: 32 41% 86%; /* Meringue */
+    --card-foreground: 31 30% 35%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 31 30% 35%;
+
+    --primary: 32 28% 23%; /* Dark brown - primary actions */
+    --primary-foreground: 50 45% 92%; /* Light cream text on primary */
+
+    --secondary: 14 65% 82%; /* Mochi - secondary accents */
+    --secondary-foreground: 31 30% 35%;
+
+    --muted: 32 41% 86%; /* Meringue */
+    --muted-foreground: 31 30% 55%;
+
+    --accent: 38 98% 84%; /* Toffee - highlights */
+    --accent-foreground: 31 30% 35%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 31 30% 71%; /* Nougat */
+    --input: 0 0% 100%;
+    --ring: 159 31% 80%;
+
+    --radius: 1rem;
+    color-scheme: light;
+
+    /* Custom gradient */
+    --gradient-pastel: linear-gradient(
+      135deg,
+      hsl(var(--flan)),
+      hsl(var(--meringue)),
+      hsl(var(--minty))
+    );
+
+    /* Glow effects */
+    --glow-minty: 0 0 20px hsl(var(--minty) / 0.6),
+      0 0 40px hsl(var(--minty) / 0.3);
+    --glow-primary: 0 0 20px hsl(var(--primary) / 0.6),
+      0 0 40px hsl(var(--primary) / 0.3);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep same palette for consistency */
+    --background: 50 45% 87%;
+    --foreground: 32 28% 23%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    background-color: hsl(var(--background)) !important;
+    color: hsl(var(--foreground));
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    background-color: hsl(var(--background)) !important;
+    color: hsl(var(--foreground));
+    min-height: 100vh;
+  }
+  /* html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  } */
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 border border-foreground/10;
+  }
+
+  .name-glow {
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+
+  .name-glow:hover {
+    text-shadow: var(--glow-primary);
+    color: hsl(var(--primary));
+  }
+
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Utility classes for staggered animation delays to avoid inline styles */
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  .delay-600 {
+    animation-delay: 0.6s;
+  }
+  .delay-700 {
+    animation-delay: 0.7s;
+  }
+  .delay-800 {
+    animation-delay: 0.8s;
+  }
+  .delay-900 {
+    animation-delay: 0.9s;
+  }
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+  .delay-1200 {
+    animation-delay: 1.2s;
+  }
+  .delay-1500 {
+    animation-delay: 1.5s;
+  }
+  .delay-2000 {
+    animation-delay: 2s;
+  }
+}
