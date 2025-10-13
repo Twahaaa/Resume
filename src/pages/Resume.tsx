@@ -14,7 +14,6 @@ import {
   Image,
   GitBranch
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
 const Resume = () => {
@@ -121,55 +120,55 @@ const Resume = () => {
 
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-6">
+    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
-        <div className="text-center mb-16 fade-in-up">
-          <h1 className="text-5xl font-bold mb-4 mt-5">Resume</h1>
-          <p className="text-xl text-muted-foreground mb-6">
+        <div className="text-center mb-12 sm:mb-16 fade-in-up">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 mt-5">Resume</h1>
+          <p className="text-lg sm:text-xl text-muted-foreground mb-6 px-4">
             A comprehensive overview of my professional journey
           </p>
-          <Button 
+          <button 
             onClick={handleDownload}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 hover-lift"
+            className="inline-flex items-center justify-center bg-minty hover:bg-minty/80 text-foreground font-semibold rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
-            <Download className="mr-2 w-5 h-5" />
+            <Download className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
             Download Resume
-          </Button>
+          </button>
         </div>
 
         {/* Education */}
-        <section className="mb-16 fade-in-up delay-200">
+        <section className="mb-12 sm:mb-16 fade-in-up delay-200">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-minty rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-foreground" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-minty rounded-xl flex items-center justify-center">
+              <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
             </div>
-            <h2 className="text-3xl font-bold">Education</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold">Education</h2>
           </div>
           
-          <div className="grid gap-6">
+          <div className="grid gap-4 sm:gap-6">
             {education.map((edu, index) => (
-              <div key={index} className="glass-card rounded-3xl p-8 hover-lift">
-                <h3 className="text-2xl font-bold mb-2">{edu.degree}</h3>
-                <p className="text-lg text-primary mb-2">{edu.institution}</p>
-                <p className="text-sm text-muted-foreground mb-4">{edu.year}</p>
-                <p className="text-muted-foreground">{edu.description}</p>
+              <div key={index} className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover-lift">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">{edu.degree}</h3>
+                <p className="text-base sm:text-lg text-primary mb-2">{edu.institution}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">{edu.year}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{edu.description}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Skills */}
-        <section className="mb-16 fade-in-up delay-300">
+        <section className="mb-12 sm:mb-16 fade-in-up delay-300">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-mochi rounded-xl flex items-center justify-center">
-              <Code className="w-6 h-6 text-foreground" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-mochi rounded-xl flex items-center justify-center">
+              <Code className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
             </div>
-            <h2 className="text-3xl font-bold">Skills</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold">Skills</h2>
           </div>
           
-          <div className="glass-card rounded-3xl p-8 hover-lift">
-            <div className="space-y-6">
+          <div className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover-lift">
+            <div className="space-y-4 sm:space-y-6">
               {skills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex justify-between mb-2">
@@ -187,19 +186,19 @@ const Resume = () => {
         </section>
 
         {/* Projects */}
-        <section className="mb-16 fade-in-up delay-400">
+        <section className="mb-12 sm:mb-16 fade-in-up delay-400">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-toffee rounded-xl flex items-center justify-center">
-              <Briefcase className="w-6 h-6 text-foreground" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-toffee rounded-xl flex items-center justify-center">
+              <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
             </div>
-            <h2 className="text-3xl font-bold">Projects</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold">Projects</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {projects.map((project, index) => (
-              <div key={index} className="glass-card rounded-3xl p-8 hover-lift">
-                <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+              <div key={index} className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover-lift">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3">{project.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
