@@ -122,7 +122,6 @@ const Resume = () => {
   return (
     <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        {/* Header */}
         <div className="text-center mb-12 sm:mb-16 fade-in-up">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 mt-5">Resume</h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-6 px-4">
@@ -137,7 +136,6 @@ const Resume = () => {
           </button>
         </div>
 
-        {/* Education */}
         <section className="mb-12 sm:mb-16 fade-in-up delay-200">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-minty rounded-xl flex items-center justify-center">
@@ -158,7 +156,6 @@ const Resume = () => {
           </div>
         </section>
 
-        {/* Skills */}
         <section className="mb-12 sm:mb-16 fade-in-up delay-300">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-mochi rounded-xl flex items-center justify-center">
@@ -185,7 +182,6 @@ const Resume = () => {
           </div>
         </section>
 
-        {/* Projects */}
         <section className="mb-12 sm:mb-16 fade-in-up delay-400">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-toffee rounded-xl flex items-center justify-center">

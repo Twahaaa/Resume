@@ -35,7 +35,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6">
       <div className="container mx-auto max-w-4xl">
-        {/* Header */}
         <div className="text-center mb-12 sm:mb-16 fade-in-up">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 mt-5">Let's Connect</h1>
           <p className="text-lg sm:text-xl text-muted-foreground px-4">
@@ -43,7 +42,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Contact Information Card */}
         <div className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-12 fade-in-up hover-lift delay-200">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Get In Touch</h2>
           <p className="text-center text-muted-foreground mb-8 sm:mb-10 text-base sm:text-lg px-2">

@@ -52,7 +52,6 @@ const BioData = () => {
   return (
     <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        {/* Header */}
         <div className="text-center mb-12 sm:mb-16 fade-in-up">
           <div className="inline-block mb-4 sm:mb-6">
             <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-minty to-mochi p-1 hover:scale-110 transition-transform duration-300 shadow-xl">
@@ -72,7 +71,6 @@ const BioData = () => {
           </p>
         </div>
 
-        {/* Bio Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {bioData.map((item, index) => {
             const Icon = item.icon;
@@ -98,7 +96,6 @@ const BioData = () => {
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 h-full transition-all duration-300">
-                  {/* Icon */}
                   <div
                     className={`w-12 h-12 sm:w-14 sm:h-14 ${
                       item.color
@@ -109,15 +106,12 @@ const BioData = () => {
                     <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-foreground" />
                   </div>
 
-                  {/* Label */}
                   <h3 className="text-xs sm:text-sm font-medium text-muted-foreground mb-2">
                     {item.label}
                   </h3>
 
-                  {/* Value */}
                   <p className="text-lg sm:text-xl font-bold mb-3 leading-tight">{item.value}</p>
 
-                  {/* Details (revealed on hover) */}
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
                       isHovered ? "max-h-20 opacity-100" : "max-h-0 opacity-0"
@@ -133,7 +127,6 @@ const BioData = () => {
           })}
         </div>
 
-        {/* About Me Section */}
         <div className="mt-12 sm:mt-16 fade-in-up delay-600">
           <div className="glass-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 hover-lift">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">

@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 pb-16">
-      {/* Hero Section */}
       <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center overflow-hidden">
-        {/* Floating Blobs */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-mochi/40 rounded-full mix-blend-multiply filter blur-2xl opacity-60 floating" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-toffee/40 rounded-full mix-blend-multiply filter blur-2xl opacity-60 floating delay-1000" />
         <div className="absolute top-40 right-20 w-56 h-56 bg-minty/40 rounded-full mix-blend-multiply filter blur-2xl opacity-60 floating delay-2000" />
 
-        {/* Content */}
         <div className="relative z-10 px-6 md:px-12 lg:px-20 max-w-3xl">
           <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 fade-in-up leading-tight delay-200">
             Hi, I'm <span className="name-glow cursor-pointer">Aboobakkar Twaha ;)</span>
@@ -35,7 +32,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Quick Links Section */}
       <section className="py-12 sm:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">Explore More</h2>

@@ -37,12 +37,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="text-2xl sm:text-3xl font-bold text-foreground tracking-wide">
             AT
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <Link
@@ -59,7 +57,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-minty/10 transition-colors duration-200"
@@ -73,7 +70,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-2 pt-4">
